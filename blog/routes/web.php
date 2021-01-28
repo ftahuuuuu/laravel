@@ -13,4 +13,6 @@ Route::get('/siswa', 'SiswaController@index')->name('siswa.view');
 Route::get('/siswa/siswatambah', 'SiswaController@create');
 Route::post('/siswa/store', 'SiswaController@store')->name('siswa.store');
 Route::post('/siswa/{id}', 'SiswaController@show')->name('siswa.show');
-Route::delete('/siswa/delete/{id}', 'SiswaController@hapus')->name('siswa.hapus');
+Route::get('/siswa/{id}/edit', 'SiswaController@edit')->name('editData');
+Route::put('/data/{id}/update', 'SiswaController@update')->name('updateData');
+Route::get('/siswa/{id}/delete', 'SiswaController@destroy')->name('delete');

@@ -13,15 +13,16 @@
 			<br>
 			<br>
 
-			<form action="/siswa/store" method="post">
-				@csrf
+			<form action="{{route('updateData', $siswa->id) }}" method="POST">
+                @csrf
+                @method('PUT')
 			  <div class="form-group">
 			    <label>Nama</label>
-			    <input type="text" class="form-control" placeholder="Masukkan Nama" name="nama">
+			    <input value="{{ $siswa->nama}}" type="text" class="form-control" placeholder="Masukkan Nama" name="nama">
 			  </div>
 			  <div class="form-group">
 			    <label>Alamat</label>
-				<input type="text" class="form-control" placeholder="Masukkan Alamat" name="alamat">
+			    <input value="{{ $siswa->alamat}}" type="text" class="form-control" placeholder="Masukkan Alamat" name="alamat">
 			  </div>
 			  <input type="submit" value="Simpan" class="btn btn-primary">
 			  <a href="{{url('/siswa')}}" class="btn btn-primary ">Kembali</a>
