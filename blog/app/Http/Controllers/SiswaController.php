@@ -42,11 +42,13 @@ class SiswaController extends Controller
     {
         $this->validate($request, [
             'nama' => 'required',
+            'notelp' => 'required|numeric|digits:12',
             'alamat' => 'required'
         ]);
 
         Siswa::create([
             'nama' => $request->nama,
+            'notelp' => $request->notelp,
             'alamat' => $request->alamat
         ]);
 

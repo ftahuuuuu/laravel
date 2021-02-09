@@ -21,6 +21,10 @@
 			    <input value="{{ $siswa->nama}}" type="text" class="form-control" placeholder="Masukkan Nama" name="nama">
 			  </div>
 			  <div class="form-group">
+			    <label>No Telepon</label>
+			    <input value="{{ $siswa->notelp}}" type="number" class="form-control" placeholder="Masukkan No Telepon" name="notelp">
+			  </div>
+			  <div class="form-group">
 			    <label>Alamat</label>
 			    <input value="{{ $siswa->alamat}}" type="text" class="form-control" placeholder="Masukkan Alamat" name="alamat">
 			  </div>
